@@ -67,7 +67,7 @@ include('includes/function.php');
     // echo $html;
 
     $planets = ["Terre", "Mars", "Pluton", "Uranus", "Mercure", "Saturne", "Venus"];
-    // debug($age);
+    // debug($planets);
     // asort($age); //tier les valeur en forme croissant
     // debug($age);
 
