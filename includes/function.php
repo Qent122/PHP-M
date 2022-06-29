@@ -10,8 +10,17 @@ function debug($data)
 function moyenne($data)
 {
     $value = 0;
-    for ($i = 0; $i < count($data); $i++) {
-        $value += $data[$i];
+    // for ($i = 0; $i < count($data); $i++) {
+    //     $value += $data[$i];
+    // }
+
+    foreach ($data as $data) {
+
+        echo $data . '<br>';
     }
-    echo $value / count($data);
+
+
+
+
+    // echo $value / count($data);
 }
