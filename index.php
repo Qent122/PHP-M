@@ -49,9 +49,9 @@ include('includes/function.php');
     ];
 
     $chaine = implode('-', $age);
-    echo $chaine;
+    // echo $chaine;
     $age2 = explode('-', $chaine);
-    debug($age);
+    // debug($age);
 
     $age['Paul'] = 33; //ajout d'un element dans un tableau
     $age['Lucie'] = 16; //modification tableau
@@ -64,8 +64,28 @@ include('includes/function.php');
         $html .= "<li> $key  a  $value  ans</li>";
     }
     $html .= "</ul>";
-    echo $html
+    // echo $html;
 
+    $planets = ["Terre", "Mars", "Pluton", "Uranus", "Mercure", "Saturne", "Venus"];
+    // debug($age);
+    // asort($age); //tier les valeur en forme croissant
+    // debug($age);
+
+    // arsort($age); //tier les valeur en forme decroissant
+    // debug($age);
+
+    // ksort($age); //tier les key en forme croissant
+    // debug($age);
+
+    // krsort($age); //tier les key en forme decroissant
+    // debug($age);
+
+    $tab = [
+        'voiture' => 'BMW',
+        'nombre' => [1, 6, 3, 8, 4, 9],
+        'planete' => ['mars', 'venus']
+    ];
+    debug($tab['nombre'][0])
 
 
 
