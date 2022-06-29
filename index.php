@@ -20,14 +20,14 @@ include('includes/function.php');
     // debug($tableau[2]);
 
     $notes = [12, 5, 16, 7];
-    // moyenne($notes); //fonction qui affiche la moyenne
+    moyenne($notes); //fonction qui affiche la moyenne
 
 
     $tab2 = array_merge($tableau, $notes); // Permet de fusionner les tableaux
     // debug($tab2);
 
     for ($i = 0; $i < count($notes); $i++) {
-        echo $notes[$i] . '<br>';
+        // echo $notes[$i] . '<br>';
     }
 
 
