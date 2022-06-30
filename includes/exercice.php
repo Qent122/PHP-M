@@ -58,7 +58,7 @@ function notValue($data) // Fonction qui retourne le texte "Aucune valeur" quand
     echo '<ul>';
 
     foreach ($data as $key => $value) {
-        $rien = '"Aucune valeur"';
+        $rien = '"Aucune Information"';
 
         if ($value == NULL) {
             echo "<li>$key : $rien</li>";
