@@ -51,7 +51,7 @@ $user = [
     "food" => '',
     "sport" => '',
 ];
-debug($user);
+// debug($user);
 
 function notValue($data) // Fonction qui retourne le texte "Aucune valeur" quand la key n'a pas de value definie
 {
@@ -69,4 +69,26 @@ function notValue($data) // Fonction qui retourne le texte "Aucune valeur" quand
     echo '</ul>';
 }
 
-echo notValue($user);
+// echo notValue($user);
+
+//=======================================================
+//Trouver le nombre maximal de ce tableau
+//=======================================================
+
+$number = [4, 15, 2, 145, 42, 5, 78, 12];
+debug($number);
+
+function plusGrand($data)
+{
+    $plusGrand = [];
+
+    foreach ($data as $data) {
+        if ($data > $plusGrand) {
+            $plusGrand[] = $data;
+        } else {
+        }
+    };
+    debug($plusGrand);
+    echo $plusGrand;
+};
+plusGrand($number);
