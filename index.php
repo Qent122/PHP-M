@@ -58,12 +58,12 @@ include('includes/function.php');
     // debug($age);
 
 
-    $html = "<ul>";
+    // $html = "<ul>";
 
-    foreach ($age as $key => $value) {
-        $html .= "<li> $key  a  $value  ans</li>";
-    }
-    $html .= "</ul>";
+    // foreach ($age as $key => $value) {
+    //     $html .= "<li> $key  a  $value  ans</li>";
+    // }
+    // $html .= "</ul>";
     // echo $html;
 
     $planets = ["Terre", "Mars", "Pluton", "Uranus", "Mercure", "Saturne", "Venus"];
@@ -93,11 +93,29 @@ include('includes/function.php');
     $tab[] = ['O', 'U', 'E', 'I'];
 
     debug($tab);
+    //Ecrire ESCCI
+    echo $tab[2][2] . $tab[1][0] . $tab[0][2] . $tab[0][2] . $tab[2][3];
 
-    echo $tab[2][2], $tab[1][0], $tab[0][2], $tab[0][2], $tab[2][3];
+    $produit = [
+        ['nom' => 'chaussettes', 'prix' => 10],
+        ['nom' => 'velo', 'prix' => 500],
+        ['nom' => 'carotte', 'prix' => 2],
+        ['nom' => 'boulon', 'prix' => 9],
+        ['nom' => 'chaussettes', 'prix' => 10],
+    ];
 
+    debug($produit);
 
+    $html = "<ul>";
 
+    foreach ($produit as $produits) {
+        // foreach ($produit[$i] as $key => $value) {
+        $html .= '<li>' . $produits['nom'] . ':' . $produits['prix'] . '€' . '</li>';
+    }
+    // }
+    $html .= "</ul>";
+
+    echo $html
 
 
     ?>
