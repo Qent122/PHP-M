@@ -72,23 +72,21 @@ function notValue($data) // Fonction qui retourne le texte "Aucune valeur" quand
 // echo notValue($user);
 
 //=======================================================
-//Trouver le nombre maximal de ce tableau
+//Trouver le nombre maximal de ce tableau sans la fonction max()
 //=======================================================
 
 $number = [4, 15, 2, 145, 42, 5, 78, 12];
 debug($number);
 
-function plusGrand($data)
+function plusGrand($data) //Fonction qui retourne le plus grand nombre d'un tableau
 {
-    $plusGrand = [];
+    $my_var = $data[0];
 
-    foreach ($data as $data) {
-        if ($data > $plusGrand) {
-            $plusGrand[] = $data;
-        } else {
+    foreach ($data as $datas) {
+        if ($datas > $my_var) {
+            $my_var = $datas;
         }
-    };
-    debug($plusGrand);
-    echo $plusGrand;
-};
-plusGrand($number);
+    }
+    return $my_var;
+}
+echo ('max :' . plusGrand($number));
