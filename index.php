@@ -1,6 +1,8 @@
 <?php
 include('includes/header.php');
 include('includes/function.php');
+include('includes/exercice.php');
+
 
 
 ?>
@@ -103,7 +105,7 @@ include('includes/function.php');
         ['nom' => 'boulon', 'prix' => 9],
     ];
 
-    debug($produit);
+    // debug($produit);
 
     $html = "<ul>";
     foreach ($produit as $produits) {
@@ -111,7 +113,7 @@ include('includes/function.php');
     }
     $html .= "</ul>";
 
-    echo $html
+    // echo $html
 
 
     ?>
