@@ -92,27 +92,23 @@ include('includes/function.php');
     $tab[] = ['S', 'U', 'V'];
     $tab[] = ['O', 'U', 'E', 'I'];
 
-    debug($tab);
+    // debug($tab);
     //Ecrire ESCCI
-    echo $tab[2][2] . $tab[1][0] . $tab[0][2] . $tab[0][2] . $tab[2][3];
+    // echo $tab[2][2] . $tab[1][0] . $tab[0][2] . $tab[0][2] . $tab[2][3];
 
     $produit = [
         ['nom' => 'chaussettes', 'prix' => 10],
         ['nom' => 'velo', 'prix' => 500],
         ['nom' => 'carotte', 'prix' => 2],
         ['nom' => 'boulon', 'prix' => 9],
-        ['nom' => 'chaussettes', 'prix' => 10],
     ];
 
     debug($produit);
 
     $html = "<ul>";
-
     foreach ($produit as $produits) {
-        // foreach ($produit[$i] as $key => $value) {
-        $html .= '<li>' . $produits['nom'] . ':' . $produits['prix'] . '€' . '</li>';
+        $html .= '<li>' . $produits['nom'] . ' : ' . $produits['prix'] . '€' . '</li>'; //version Mehdi
     }
-    // }
     $html .= "</ul>";
 
     echo $html

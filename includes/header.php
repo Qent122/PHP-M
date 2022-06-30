@@ -11,5 +11,7 @@
 <body>
     <header>
         <h1>Les tableaux en PHP</h1>
+        <?php echo date('d' . '/' . 'm' . '/' . 'Y'); ?>
+
     </header>
     <hr>
