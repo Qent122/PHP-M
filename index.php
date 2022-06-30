@@ -80,12 +80,23 @@ include('includes/function.php');
     // krsort($age); //tier les key en forme decroissant
     // debug($age);
 
-    $tab = [
-        'voiture' => 'BMW',
-        'nombre' => [1, 6, 3, 8, 4, 9],
-        'planete' => ['mars', 'venus']
-    ];
-    debug($tab['nombre'][0])
+    // $tab = [
+    //     'voiture' => 'BMW',
+    //     'nombre' => [1, 6, 3, 8, 4, 9],
+    //     'planete' => ['mars', 'venus']
+    // ];
+    // debug($tab['nombre'][0]);
+
+    $tab = [];
+    $tab[] = ['A', 'B', 'C'];
+    $tab[] = ['S', 'U', 'V'];
+    $tab[] = ['O', 'U', 'E', 'I'];
+
+    debug($tab);
+
+    echo $tab[2][2], $tab[1][0], $tab[0][2], $tab[0][2], $tab[2][3];
+
+
 
 
 
