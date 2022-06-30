@@ -13,7 +13,6 @@ function moyenne($data)
     // for ($i = 0; $i < count($data); $i++) {
     //     $value += $data[$i];
     // }
-
     foreach ($data as $data) {
 
         echo $data . '<br>';
