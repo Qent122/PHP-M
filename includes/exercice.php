@@ -101,19 +101,19 @@ $user_array = $user_array_all['results'];
 
 function searchInfo($data)
 {
-    echo "<div id='container'>";
+    echo "<div id='BG'><div id='container'>";
     foreach ($data as $user) {
-        echo '<div class="card">' .
+        echo '<div class="card  l">' .
             '<figure><img src=' . $user['picture']['large'] . '></figure>' .
             "<p>" . $user["name"]["first"] . ' ' . $user["name"]["last"] . "</p>" .
             '<p>' . $user['email'] . '</p>' .
-            "<p>" . $user["dob"]["age"] . "</p>" .
-            "<p>" . $user["location"]["street"]["number"] . ' ' . $user["location"]["street"]["name"] . "</p>" . "<p>" . $user["location"]["city"] . "</p>" . "<p>" . $user["location"]["state"] . "</p>" . "<p>" . $user["location"]["country"] . "</p>" .
+            "<p>" . $user["dob"]["age"] . " years old</p>" .
+            "<p>" . $user["location"]["street"]["number"] . ' ' . $user["location"]["street"]["name"] . "</p>" . "<p>City : " . $user["location"]["city"] . "</p>" . "<p>State : " . $user["location"]["state"] . "</p>" . "<p>Country : " . $user["location"]["country"] . "</p>" .
 
             "<p>" . $user["phone"] . "</p>" .
 
 
             '</div>';
     }
-    echo "</div>";
+    echo "</div></div>";
 }
