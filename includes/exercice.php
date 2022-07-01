@@ -88,5 +88,32 @@ function plusGrand($data) //Fonction qui retourne le plus grand nombre d'un tabl
         }
     }
     return $my_var;
-}
+};
 // echo ('max : ' . plusGrand($number));
+
+
+//=======================================================
+
+$users = file_get_contents("./data/user.json");
+$user_array_all = json_decode($users, true);
+$user_array = $user_array_all['results'];
+// debug($user_array);
+
+function searchInfo($data)
+{
+    echo "<div id='container'>";
+    foreach ($data as $user) {
+        echo '<div class="card">' .
+            '<figure><img src=' . $user['picture']['large'] . '></figure>' .
+            "<p>" . $user["name"]["first"] . ' ' . $user["name"]["last"] . "</p>" .
+            '<p>' . $user['email'] . '</p>' .
+            "<p>" . $user["dob"]["age"] . "</p>" .
+            "<p>" . $user["location"]["street"]["number"] . ' ' . $user["location"]["street"]["name"] . "</p>" . "<p>" . $user["location"]["city"] . "</p>" . "<p>" . $user["location"]["state"] . "</p>" . "<p>" . $user["location"]["country"] . "</p>" .
+
+            "<p>" . $user["phone"] . "</p>" .
+
+
+            '</div>';
+    }
+    echo "</div>";
+}
