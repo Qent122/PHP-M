@@ -154,7 +154,7 @@ include('includes/exercice.php');
 
     debug($array_peoples_php);
 
-    debug("<figure> $json_peoples[1][image] </figure>");
+    echo '<figure><img src = ' . $array_peoples_php[1]['image'] . '></figure>';
 
 
 
