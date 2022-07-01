@@ -154,14 +154,14 @@ include('includes/exercice.php');
 
     debug($array_peoples_php);
 
-    echo '<figure><img src = ' . $array_peoples_php[1]['image'] . '></figure>';
+    echo 'Image ajouter depuis php dans l\'html <figure><img src = ' . $array_peoples_php[1]['image'] . '></figure>';
 
 
 
     ?>
     <div class="json">
-        <img src="<?php echo $array_peoples_php[1]['image']; ?>" alt="">
-        <p><?php echo "Le nom de Anny est " . $array_peoples_php[1]['nom']; ?></p>
+        <p>Image ajouter depuis l'html dans php</p>
+        <figure><img src="<?php echo $array_peoples_php[1]['image']; ?>" alt=""></figure>
     </div>
 </main>
 
