@@ -2,6 +2,7 @@
 include('includes/header.php');
 include('includes/function.php');
 include('includes/exercice.php');
+// include('assets/card.css')
 
 
 
@@ -115,8 +116,55 @@ include('includes/exercice.php');
 
     // echo $html
 
+    $peoples = [
+        [
+            'nom' => 'Mohamed',
+            'prenom' => 'Rachid',
+            'email' => 'momodu78@bled.rocma',
+        ],
+        [
+            'nom' => 'Siste',
+            'prenom' => 'Lara',
+            'email' => 'lara@gouv.fr',
+        ]
+    ];
+
+    // debug($peoples);
+    // echo 'Le nom de Lara est ' . $peoples[1]['nom'];
+    // $json_peoples = json_encode($peoples);
+    // debug($json_peoples);
+
+    $json_peoples = '[{
+        "nom" : "Durand",
+        "prenom" : "Marc",
+        "age" : 23,
+        "couleur":["rouge","vert","jaune"],
+        "image":"https://ximg.es/64x64/000/fff"
+    },{
+        "nom" : "Vilko",
+        "prenom" : "Anny",
+        "age" : 45,
+        "couleur":["rose","violet","bleu"],
+        "image":"https://ximg.es/100x100/000/fff"
+    }]';
+
+    // debug($json_peoples);
+
+
+    $array_peoples_php = json_decode($json_peoples, true);
+
+    // debug($array_peoples_php);
+
+    // echo 'Image ajouter depuis php dans l\'html <figure><img src = ' . $array_peoples_php[1]['image'] . '></figure>';
+
+
+    searchInfo($user_array);
 
     ?>
+    <!-- <div class="json">
+        <p>Image ajouter depuis l'html dans php</p>
+        <figure><img src="<?php echo $array_peoples_php[1]['image']; ?>" alt="<?= $array_peoples_php[1]['prenom'] ?>"></figure>
+    </div> -->
 </main>
 
 
