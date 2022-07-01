@@ -115,8 +115,54 @@ include('includes/exercice.php');
 
     // echo $html
 
+    $peoples = [
+        [
+            'nom' => 'Mohamed',
+            'prenom' => 'Rachid',
+            'email' => 'momodu78@bled.rocma',
+        ],
+        [
+            'nom' => 'Siste',
+            'prenom' => 'Lara',
+            'email' => 'lara@gouv.fr',
+        ]
+    ];
+
+    // debug($peoples);
+    // echo 'Le nom de Lara est ' . $peoples[1]['nom'];
+    // $json_peoples = json_encode($peoples);
+    // debug($json_peoples);
+
+    $json_peoples = '[{
+        "nom" : "Durand",
+        "prenom" : "Marc",
+        "age" : 23,
+        "couleur":["rouge","vert","jaune"],
+        "image":"https://ximg.es/64x64/000/fff"
+    },{
+        "nom" : "Vilko",
+        "prenom" : "Anny",
+        "age" : 45,
+        "couleur":["rose","violet","bleu"],
+        "image":"https://ximg.es/64x64/000/fff"
+    }]';
+
+    debug($json_peoples);
+
+
+    $array_peoples_php = json_decode($json_peoples, true);
+
+    debug($array_peoples_php);
+
+    debug("<figure> $json_peoples[1][image] </figure>");
+
+
 
     ?>
+    <div class="json">
+        <img src="<?php echo $array_peoples_php[1]['image']; ?>" alt="">
+        <p><?php echo "Le nom de Anny est " . $array_peoples_php[1]['nom']; ?></p>
+    </div>
 </main>
 
 
